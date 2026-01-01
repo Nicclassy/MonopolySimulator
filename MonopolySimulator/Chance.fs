@@ -1,0 +1,1 @@
+namespace MonopolySimulator.Types
