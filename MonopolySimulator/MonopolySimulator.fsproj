@@ -6,13 +6,13 @@
 
   <ItemGroup>
     <Compile Include="Player.fs" />
-    <Compile Include="Chance.fs" />
-    <Compile Include="CommunityChest.fs" />
     <Compile Include="Pile.fs" />
     <Compile Include="Space.fs" />
     <Compile Include="Board.fs" />
     <Compile Include="State.fs" />
     <Compile Include="Movement.fs" />
+    <Compile Include="CommunityChest.fs" />
+    <Compile Include="Chance.fs" />
     <Compile Include="Game.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
