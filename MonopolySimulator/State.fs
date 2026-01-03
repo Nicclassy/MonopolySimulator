@@ -35,7 +35,6 @@ type PlayerInventory = {
 type MovementState =
     | Default
     | PassedGo
-    | NextPosition of position : uint
 
 type PlayerState = {
     Character: Character

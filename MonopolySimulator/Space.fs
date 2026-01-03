@@ -64,6 +64,16 @@ type SpaceType =
     | FreeParking
     | Go
 
+type NearestSpaceType = 
+    | NearestStation
+    | NearestUtility
+with
+    member this.IsSameType spaceType =
+        match spaceType with
+        | Station _ -> this = NearestStation
+        | Utility _ -> this = NearestUtility
+        | _ -> false
+
 type Space = {
     Id: SpaceId
     Name: string

@@ -18,8 +18,11 @@ type Board(spaces: Space array) =
     member _.Item
         with get (index: SpaceId) = spacesById[index]
 
-    member _.PositionOf space= positionsBySpaceId[space.Id]
     member _.Length = uint spaces.Length
+    member _.PositionOf space= positionsBySpaceId[space.Id]
+    member this.Nearest (start : uint) (nearestSpaceType : NearestSpaceType) = 
+        Seq.initInfinite (fun position -> (start + uint position + 1u) % (this.Length + 1u))
+        |> Seq.find (fun position -> nearestSpaceType.IsSameType this.[position].Type)
 
 module Board = 
     let Default () = Board [|
